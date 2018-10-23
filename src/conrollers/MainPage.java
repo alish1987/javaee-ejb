@@ -1,4 +1,8 @@
-import javax.ejb.EJB;
+package conrollers;
+
+import models.Passenger;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -6,15 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
-@WebServlet("/FlightService")
-public class FlightService extends HttpServlet {
-    public FlightService() {
+@WebServlet("/")
+public class MainPage extends HttpServlet {
+    public MainPage() {
         super();
     }
 
-    @EJB
-    FlightServiceBean flightServiceBean;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -23,6 +26,9 @@ public class FlightService extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
-        out.println("Passenger has been added to list.Number of Passengers : " + flightServiceBean.getName());
+        ServletContext servletContext = this.getServletContext();
+        ArrayList<Passenger> passengers = (ArrayList<Passenger>) servletContext.getAttribute("passengers");
+        servletContext.setAttribute("passengers", passengers);
+        out.println("Passenger has been added to list.Number of Passengers : " + passengers.size());
     }
 }
