@@ -1,30 +1,66 @@
 package service;
 
-import javax.ejb.EJB;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
 
-@WebServlet("/flightService")
-public class FlightService extends HttpServlet {
+@Stateless(name = "FlightServiceEJB")
+@LocalBean
+public class FlightService {
     public FlightService() {
-        super();
     }
 
-    @EJB
-    FlightServiceBean flightServiceBean;
+    private Integer id = 111;
+    private String from = "Los Angles";
+    private String to = "London";
+    private Integer price= 400;
+    private Integer numOfSeats = 4;
+    private String airPlaneModel = "Boeing 787";
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    public Integer getId() {
+        return id;
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        response.setContentType("text/html");
-        out.println("Passenger has been added to list.Number of Passengers : " + flightServiceBean.getName());
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Integer getNumOfSeats() {
+        return numOfSeats;
+    }
+
+    public void setNumOfSeats(Integer numOfSeats) {
+        this.numOfSeats = numOfSeats;
+    }
+
+    public String getAirPlaneModel() {
+        return airPlaneModel;
+    }
+
+    public void setAirPlaneModel(String airPlaneModel) {
+        this.airPlaneModel = airPlaneModel;
     }
 }
