@@ -5,14 +5,20 @@ import javax.ejb.Stateless;
 
 @Stateless(name = "FlightServiceEJB")
 @LocalBean
+/**
+ * in  yaeni ke faghat far in majule mitavanad estefade shavad (local) va majulaye dg nmitavanand az on estefade konand .
+ */
 public class FlightService {
+    /**
+     * vaghti in class ra bean kardim , ejb container modiriate in class ra bar ohde migirad .
+     */
     public FlightService() {
     }
 
     private Integer id = 111;
     private String from = "Los Angles";
     private String to = "London";
-    private Integer price= 400;
+    private Integer price = 400;
     private Integer numOfSeats = 4;
     private String airPlaneModel = "Boeing 787";
 

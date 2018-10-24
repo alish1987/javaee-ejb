@@ -17,6 +17,10 @@ public class FlightDetail extends HttpServlet {
         super();
     }
 
+    /**
+     * inject FlightService (make instance from FlightService class)
+     * az ejb container darkhast mikonad ke yek instance az in FlightService bema bedahad .
+     */
     @EJB
     FlightService flightService;
 
