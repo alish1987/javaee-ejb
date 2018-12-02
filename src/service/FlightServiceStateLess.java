@@ -1,18 +1,14 @@
 package service;
 
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
-@Stateless(name = "FlightServiceEJB")
-@LocalBean
-/**
- * in  yaeni ke faghat far in majule mitavanad estefade shavad (local) va majulaye dg nmitavanand az on estefade konand .
- */
-public class FlightService {
+
+@Stateless(name = "flightServiceStateLess")
+public class FlightServiceStateLess implements FlightLocal {
     /**
      * vaghti in class ra bean kardim , ejb container modiriate in class ra bar ohde migirad .
      */
-    public FlightService() {
+    public FlightServiceStateLess() {
     }
 
     private Integer id = 111;
@@ -70,3 +66,5 @@ public class FlightService {
         this.airPlaneModel = airPlaneModel;
     }
 }
+
+

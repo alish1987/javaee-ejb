@@ -1,4 +1,4 @@
-package conrollers;
+package controllers;
 
 import models.Passenger;
 

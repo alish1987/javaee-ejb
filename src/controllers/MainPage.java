@@ -1,8 +1,8 @@
-package conrollers;
+package controllers;
 
-import service.FlightService;
+import models.Passenger;
 
-import javax.ejb.EJB;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,19 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
-@WebServlet("/flightDetail")
-public class FlightDetail extends HttpServlet {
-    public FlightDetail() {
+@WebServlet("/")
+public class MainPage extends HttpServlet {
+    public MainPage() {
         super();
     }
 
-    /**
-     * inject FlightService (make instance from FlightService class)
-     * az ejb container darkhast mikonad ke yek instance az in FlightService bema bedahad .
-     */
-    @EJB
-    FlightService flightService;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -30,8 +25,10 @@ public class FlightDetail extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        out.println("the flights details servlet has been called ...");
-        out.println(flightService.getAirPlaneModel());
-        out.println(flightService.getFrom());
+        response.setContentType("text/html");
+        ServletContext servletContext = this.getServletContext();
+        ArrayList<Passenger> passengers = (ArrayList<Passenger>) servletContext.getAttribute("passengers");
+        servletContext.setAttribute("passengers", passengers);
+        out.println("Passenger has been added to list.Number of Passengers : " + passengers.size());
     }
 }
