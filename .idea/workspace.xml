@@ -8,13 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97aaf8ed-936b-4ab5-8b2f-a8bdc177badb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SessionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/AddOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/ShowCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/CounterBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/CounterStateFullBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/FlightServiceStateFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/FlightServiceStateFull.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -435,7 +429,7 @@
       <workItem from="1540555133684" duration="664000" />
       <workItem from="1541097579156" duration="272000" />
       <workItem from="1541099720226" duration="724000" />
-      <workItem from="1543759527568" duration="23892000" />
+      <workItem from="1543759527568" duration="24506000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1540369226327</created>
@@ -458,14 +452,22 @@
       <option name="project" value="LOCAL" />
       <updated>1543785494715</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Default Changelist">
+      <created>1543859705136</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1543859705136</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32261000" />
+    <option name="totallyTimeSpent" value="32875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498998" visible="true" weight="0.1375839" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
