@@ -1,8 +1,8 @@
 package service;
 
-import javax.ejb.Stateless;
+import javax.ejb.Stateful;
 
-@Stateless(name = "flightServiceStateFull")
+@Stateful(name = "flightServiceStateFull")
 public class FlightServiceStateFull implements FlightLocal {
     /**
      * vaghti in class ra bean kardim , ejb container modiriate in class ra bar ohde migirad .
